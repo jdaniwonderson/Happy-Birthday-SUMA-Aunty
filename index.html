@@ -155,16 +155,6 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-58229732-1', 'auto');
-  ga('send', 'pageview');
-
-$(window).resize(function() {
-    var mobileWidth =  (window.innerWidth > 0) ? 
-                        window.innerWidth : 
-                        screen.width;
-    var viewport = (mobileWidth > 360) ?
-                    'width=device-width, initial-scale=1.0' :
-                    'width=1200';
-    $("meta[name=viewport]").attr('content', viewport);
-}).resize();   
+  ga('send', 'pageview');   
 </script>
 </html>
