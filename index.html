@@ -9,7 +9,7 @@
 	<meta charset="UTF-8" />
 	<meta name="description" content="Happy Birthday message">
 	<meta name="robots" content="index, follow" />
-	<link rel="author" href="https://facebook.com/wikivky/" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Birthday, Happy">
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
@@ -157,5 +157,14 @@
   ga('create', 'UA-58229732-1', 'auto');
   ga('send', 'pageview');
 
+$(window).resize(function() {
+    var mobileWidth =  (window.innerWidth > 0) ? 
+                        window.innerWidth : 
+                        screen.width;
+    var viewport = (mobileWidth > 360) ?
+                    'width=device-width, initial-scale=1.0' :
+                    'width=1200';
+    $("meta[name=viewport]").attr('content', viewport);
+}).resize();   
 </script>
 </html>
